@@ -1,20 +1,12 @@
-```yaml
 name: Makhan News Update
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
-  update-news:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Call Makhan update URL
-        run: |
-          echo "Starting Makhan update..."
-          echo "Calling: https://makhan.ir/update-news.php"
-          curl -v -L --max-time 120 https://makhan.ir/update-news.php
-          echo "Makhan update finished."
-```
+      - name: Test GitHub
+        run: echo "GitHub Actions is working"
