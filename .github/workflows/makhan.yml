@@ -1,9 +1,14 @@
+
 name: Makhan News Update
+
 on:
+  schedule:
+    - cron: "*/5 * * * *"
   workflow_dispatch:
+
 jobs:
-  test:
+  update:
     runs-on: ubuntu-latest
     steps:
-      - name: Test
-        run: echo Hello
+      - run: curl -L https://makhan.ir/update-news.php
+```
