@@ -1,12 +1,9 @@
 name: Makhan News Update
-
 on:
-  schedule:
-    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - run: curl -k -L --max-time 120 https://makhan.ir/update-news.php
+      - run: curl -L https://makhan.ir/update-news.php
