@@ -1,3 +1,4 @@
+```yaml
 name: Makhan News Update
 
 on:
@@ -12,4 +13,8 @@ jobs:
     steps:
       - name: Call Makhan update URL
         run: |
-          curl -L --fail --max-time 120 https://makhan.ir/update-news.php
+          echo "Starting Makhan update..."
+          echo "Calling: https://makhan.ir/update-news.php"
+          curl -v -L --max-time 120 https://makhan.ir/update-news.php
+          echo "Makhan update finished."
+```
