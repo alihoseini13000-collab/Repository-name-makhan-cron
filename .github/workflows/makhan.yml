@@ -11,4 +11,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: curl -L https://makhan.ir/update-news.php
-
