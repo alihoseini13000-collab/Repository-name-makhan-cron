@@ -3,7 +3,7 @@ name: Makhan News Update
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -11,15 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check Makhan website
-        run: |
-          echo "Checking Makhan..."
-          curl -I -L --max-time 30 https://makhan.ir
-
-      - name: Run Makhan update
-        run: |
-          echo "Calling update-news.php..."
-          curl -v -L --max-time 120 https://makhan.ir/update-news.php
-          echo "Update request finished."
+      - name: Update Makhan
+        run: curl -L --max-time 120 https://makhan.ir/update-news.php
 ```
+
 
