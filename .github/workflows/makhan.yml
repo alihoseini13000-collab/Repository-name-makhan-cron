@@ -1,11 +1,6 @@
 
 name: Makhan News Update
-
-on:
-  schedule:
-    - cron: "*/5 * * * *"
-  workflow_dispatch:
-
+on: [workflow_dispatch, schedule]
 jobs:
   update:
     runs-on: ubuntu-latest
